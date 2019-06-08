@@ -1,5 +1,7 @@
 <!--
 https://pypi.org/project/readme-generator/
+https://pypi.org/project/python-readme-generator/
+https://pypi.org/project/django-readme-generator/
 -->
 
 [![](https://img.shields.io/pypi/pyversions/django-subcommands.svg?longCache=True)](https://pypi.org/project/django-subcommands/)
@@ -39,5 +41,5 @@ $ python manage.py command subcommand1
 ```
 
 <p align="center">
-    <a href="https://pypi.org/project/readme-generator/">readme-generator</a>
+    <a href="https://pypi.org/project/django-readme-generator/">django-readme-generator</a>
 </p>
