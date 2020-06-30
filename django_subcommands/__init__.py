@@ -1,9 +1,9 @@
-#!/usr/bin/env python
+__all__ = ['SubCommands']
+
+
 from django.core.management.base import BaseCommand
-import public
 
 
-@public.add
 class SubCommands(BaseCommand):
     """SubCommands class. attrs: `subcommands` (dict)"""
     argv = []
@@ -19,7 +19,8 @@ class SubCommands(BaseCommand):
         for command_name, command_class in self.subcommands.items():
             command = command_class()
 
-            subparser = subparsers.add_parser(command_name, help=command_class.help)
+            subparser = subparsers.add_parser(
+                command_name, help=command_class.help)
             command.add_arguments(subparser)
             command_parser = command.create_parser(self.argv[0], self.argv[1])
             subparser._actions = command_parser._actions
